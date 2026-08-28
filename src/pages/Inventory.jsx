@@ -20,7 +20,7 @@ function Inventory() {
   }, []);
 
 
-  const sortedCars = [...filteredCars].sort((a, b) => {
+  const sortedCars = [...cars].sort((a, b) => {
     if (sortOrder === "none") return 0;
 
     const priceA = Number(a.price.replace(/,/g, ""));

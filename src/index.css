@@ -1,0 +1,50 @@
+@import "@fontsource/playfair-display";
+@import "@fontsource/inter";
+
+/* 1. Smooth scrolling for the whole site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Custom Gold Scrollbar (because luxury) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1b;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A96E;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8952e;
+}
+
+/* 3. Fade-up animation keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 4. Utility class for the animation */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* 5. Slight delay variations for a staggered effect */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}

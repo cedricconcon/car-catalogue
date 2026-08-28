@@ -14,6 +14,7 @@ import "@fontsource/inter";
 function Catalogue() {
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const [inquiry, setInquiry] = useState({
     name: "",
     email: "",
@@ -95,6 +96,12 @@ function Catalogue() {
         >
           LUXE AUTO
         </h2>
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="block md:hidden text-3xl text-black focus:outline-none"
+        >
+          {menuOpen ? "X" : "☰"}
+        </button>
         <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-700">
           <Link
             to="/"
@@ -146,6 +153,28 @@ function Catalogue() {
           Inquire
         </button>
       </header>
+      {menuOpen && (
+        <div className="fixed top-[72px] left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg z-40 p-6 flex flex-col gap-4 text-lg font-medium">
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+          <Link to="/inventory" onClick={() => setMenuOpen(false)}>
+            Inventory
+          </Link>
+          <Link to="/trims" onClick={() => setMenuOpen(false)}>
+            Trims
+          </Link>
+          <Link to="/financing" onClick={() => setMenuOpen(false)}>
+            Financing
+          </Link>
+          <Link to="/heritage" onClick={() => setMenuOpen(false)}>
+            Heritage
+          </Link>
+          <Link to="/ownership" onClick={() => setMenuOpen(false)}>
+            Ownership
+          </Link>
+        </div>
+      )}
       {showInquireModal && (
         <div className="bg-black/50 fixed inset-0 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl max-w-md w-full p-8 max-h-[90vh] overflow-y-auto">

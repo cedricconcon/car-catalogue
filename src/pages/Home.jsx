@@ -145,6 +145,10 @@ function Catalogue() {
             Ownership
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C9A96E] transition-all duration-300 group-hover:w-full"></span>
           </Link>
+          <Link to="/admin" className="relative hover:text-black cursor-pointer group">
+            Admin
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C9A96E] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
         </nav>
         <button
           onClick={() => setShowInquireModal((prev) => !prev)}
@@ -172,6 +176,9 @@ function Catalogue() {
           </Link>
           <Link to="/ownership" onClick={() => setMenuOpen(false)}>
             Ownership
+          </Link>
+          <Link to="/admin" onClick={() => setMenuOpen(false)} className="border-t border-gray-200 pt-2 my-2 text-[#C9A96E] font-semibold">
+            Admin Panel
           </Link>
         </div>
       )}
@@ -287,9 +294,9 @@ function Catalogue() {
         </div>
       )}
       <main
-        className="relative min-h-[90vh] w-full bg-no-repeat bg-cover bg-center bg-fixed bg-black flex items-center justify-center flex-col px-4 pt-20 animate-fade-up"
+        className="relative min-h-[90vh] w-full bg-no-repeat bg-cover bg-center bg-fixed flex items-center justify-center flex-col px-4 pt-20 animate-fade-up"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), url(${backgroundPicture})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%), url(${backgroundPicture})`,
         }}
       >
         <h1 className="text-white font-bold text-4xl md:text-6xl lg:text-7xl text-center leading-tight drop-shadow-[0_0_30px_rgba(201,169,110,0.3)]">

@@ -1,6 +1,15 @@
 @import "@fontsource/playfair-display";
 @import "@fontsource/inter";
 
+/* 0. Base background for ALL pages */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6; /* Soft, clean light gray - FIXES BLACK VOID */
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
 /* 1. Smooth scrolling for the whole site */
 html {
   scroll-behavior: smooth;
